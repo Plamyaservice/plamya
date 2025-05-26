@@ -1,0 +1,352 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header {
+  background: linear-gradient(90deg, #0d6efd 70%, #fd7e14 100%);
+}
+
+.flame-bg {
+  background: linear-gradient(180deg, #189eff 0%, #0d6efd 30%, #fd7e14 70%, #fffbea 100%);
+  box-shadow: 0 0 80px 8px #fd7e1499;
+}
+.btn-flame {
+  background: linear-gradient(90deg, #0d6efd 10%, #fd7e14 60%, #fffbea 100%) !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 0 20px 0 #fd7e1488, 0 0 40px 10px #fffbea44 inset;
+  font-weight: bold;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.btn-flame:hover {
+  box-shadow: 0 0 40px 10px #fd7e14cc, 0 0 80px 20px #fffbea66 inset;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.flame {
+  width: 35px;
+  height: 55px;
+  margin-left: 0;
+  margin-right: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.flame-inner {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 22px;
+  height: 45px;
+  background:
+    radial-gradient(ellipse at center, #fff8dd 0%, #fff376 40%, #fd7e14 70%, #0d6efd 100%);
+  border-radius: 50% 50% 50% 50% / 60% 50% 80% 70%;
+  transform: translate(-50%, 0) scaleY(1);
+  animation: flame-flicker 1.2s infinite alternate;
+  box-shadow: 0 0 24px 6px #fd7e1455;
+}
+@keyframes flame-flicker {
+  0% {
+    transform: translate(-50%, 2px) scaleY(1);
+    filter: blur(1px) brightness(1.1);
+  }
+  50% {
+    transform: translate(-50%, 0) scaleY(1.1) scaleX(0.98);
+    filter: blur(2px) brightness(1.2);
+  }
+  100% {
+transform: translate(-50%, -4px) scaleY(1.13) scaleX(0.96);
+    filter: blur(1px) brightness(1.3);
+  }
+}
+
+h1, h2, h5, .display-6 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.icon-card img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.btn-danger, .bg-danger {
+  background: #fd7e14 !important;
+  border: none;
+}
+.btn-warning, .bg-warning {
+  background: #ffbb33 !important;
+}
+.btn-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+footer {
+  background: #272c30;
+}
+.accordion-button:not(.collapsed) {
+  color: #fd7e14;
+  background-color: #eaf4ff;
+}
+/* Адаптивные правки */
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 1.3rem !important;
+  }
+  h2 {
+    font-size: 1.1rem !important;
+  }
+  .btn-lg, .btn, button {
+    font-size: 1rem !important;
+    padding: 10px 18px !important;
+  }
+  .icon-card {
+    text-align: center;
+  }
+}
+/* Улучшаем читаемость на очень узких экранах */
+@media (max-width: 575.98px) {
+  .container, .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.phone-link {
+  text-decoration: none;
+  color: #fff !important;
+  letter-spacing: 0.01em;
+}
+.phone-link:hover {
+  color: #ffbb33 !important;
+  text-decoration: underline;
+}
+.whatsapp-btn svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.whatsapp-btn {
+  font-weight: bold;
+  transition: box-shadow 0.13s, background 0.11s;
+}
+.whatsapp-btn:hover,
+.whatsapp-btn:focus {
+  background: #128C7E !important;
+  color: #fff !important;
+  box-shadow: 0 3px 14px #25d36660;
+  text-decoration: none;
+}
+  .service-card {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .service-card {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+
+box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  /* Иконки услуг */
+  .service-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Индивидуальные стили для каждой карточки */
+  .service-card-1 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+  }
+  
+  .service-card-2 {
+    background: linear-gradient(135deg, #42a5f5, #0d47a1);
+    color: white;
+  }
+  
+  .service-card-3 {
+    background: linear-gradient(135deg, #66bb6a, #1b5e20);
+    color: white;
+  }
+  
+  .service-card-4 {
+    background: linear-gradient(135deg, #42a5f5, #0d47a1);
+    color: white;
+  }
+  
+  .service-card-5 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+  }
+  
+  /* Стиль для ссылки "Смотреть примеры работ" */
+  .view-gallery {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-gallery:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Стили для карусели */
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    padding: 10px;
+    bottom: 20px;
+  }
+  
+  /* Анимация для иконок */
+  .service-icon i {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/* Стили для квадратного модального окна с адаптацией */
+
+/* Базовые стили для квадратного контейнера */
+.square-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.square-image-container {
+  position: relative;
+  padding-top: 100%; /* Соотношение 1:1 (квадрат) */
+  overflow: hidden;
+}
+
+.square-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Стили для модального окна */
+.square-modal {
+  width: auto;
+}
+
+/* Адаптивные стили для разных устройств */
+/* Мобильные устройства (телефоны) */
+@media (max-width: 576px) {
+  .square-modal {
+    max-width: 95%;
+    margin: 0.5rem auto;
+  }
+  
+  .carousel-caption p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .modal-title {
+    font-size: 18px;
+  }
+}
+
+/* Планшеты */
+@media (min-width: 577px) and (max-width: 991px) {
+  .square-modal {
+    max-width: 500px;
+  }
+  
+  .carousel-caption p {
+    font-size: 16px;
+  }
+}
+
+/* Ноутбуки и десктопы */
+@media (min-width: 992px) {
+  .square-modal {
+    max-width: 600px;
+  }
+  
+  .carousel-caption p {
+    font-size: 18px;
+  }
+}
+
+/* Улучшение видимости подписей */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+/* Убираем лишние отступы */
+.modal-body {
+  padding: 0;
+}
+
+/* Улучшаем внешний вид кнопок карусели */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+/* Стили для видео в карусели */
+.video-container {
+  background-color: #000;
+}
+
+.result-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Остановка автовоспроизведения видео, когда слайд не активен */
+.carousel-item:not(.active) .result-video {
+  display: none;
+}
+
+/* Запуск видео при активации слайда */
+.carousel-item.active .result-video {
+  display: block;
+}
